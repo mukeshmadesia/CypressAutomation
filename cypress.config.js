@@ -13,8 +13,8 @@ module.exports = defineConfig({
 
   //retries
   retries: {
-    runMode: 2,
-    openMode: 0,
+    runMode: 1,
+    openMode: 1,
   },
   
   //for integrating cypress cloud dashboard

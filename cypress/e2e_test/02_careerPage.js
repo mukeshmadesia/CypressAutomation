@@ -39,13 +39,13 @@ describe('Check career page',()=>{
 
    for (const country of countryList) {
       it('Check \'' + country + '\' is available to select as Country', ()=> {
-         cy.get('#countryFilter').select(country, {force: true})
+         cy.get('#countryFilter').scrollIntoView().select(country, {force: true})
       })
    }
 
    for (const jobCategory of jobCategoryList) {
       it('Check \'' + jobCategory + '\' is available to select as Job Category', ()=> {
-         cy.get('#jobsFilter').select(jobCategory, {force: true})
+         cy.get('#jobsFilter').scrollIntoView().select(jobCategory, {force: true})
       })
    }
 })
