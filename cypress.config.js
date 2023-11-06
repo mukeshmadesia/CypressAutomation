@@ -5,7 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    specPattern: 'cypress\\e2e_test\\*.js'
+    specPattern: 'cypress/e2e_test/*.js'
   },
 
   //to access iframe

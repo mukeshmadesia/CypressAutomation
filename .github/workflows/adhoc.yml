@@ -7,15 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Cypress run
-        uses: cypress-io/github-action@v4
+        uses: cypress-io/github-action@v6
         with:
           browser: chrome
           record: true
-          node-version: 18
         env: 
           CYPRESS_RECORD_KEY: 45975225-8c53-44da-9711-cc5ed83bb423
 
@@ -23,6 +27,11 @@ jobs:
     runs-on: ubuntu-latest
     container: cypress/browsers:node12.18.3-chrome87-ff82
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -31,7 +40,6 @@ jobs:
         with:
           browser: electron
           record: true
-          node-version: 18
         env: 
           CYPRESS_RECORD_KEY: 45975225-8c53-44da-9711-cc5ed83bb423
 
@@ -39,6 +47,11 @@ jobs:
     runs-on: ubuntu-latest
     container: cypress/browsers:node16.16.0-chrome107-ff107-edge
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -47,6 +60,5 @@ jobs:
         with:
           browser: edge
           record: true
-          node-version: 18
         env: 
           CYPRESS_RECORD_KEY: 45975225-8c53-44da-9711-cc5ed83bb423
