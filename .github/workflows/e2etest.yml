@@ -15,6 +15,7 @@ jobs:
         with:
           browser: chrome
           record: true
+          node-version: 18
         env: 
           CYPRESS_RECORD_KEY: 45975225-8c53-44da-9711-cc5ed83bb423
 
@@ -30,6 +31,7 @@ jobs:
         with:
           browser: electron
           record: true
+          node-version: 18
         env: 
           CYPRESS_RECORD_KEY: 45975225-8c53-44da-9711-cc5ed83bb423
 
@@ -45,5 +47,6 @@ jobs:
         with:
           browser: edge
           record: true
+          node-version: 18
         env: 
           CYPRESS_RECORD_KEY: 45975225-8c53-44da-9711-cc5ed83bb423
