@@ -1,0 +1,9 @@
+{
+    "countryList": ["India","Poland","Norway"],
+    "jobCategoryList": ["Administration", 
+                        "Digital Technology & Research",
+                        "Engineering & Design",
+                        "Finance",
+                        "Other"]
+
+}

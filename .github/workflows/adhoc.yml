@@ -1,0 +1,49 @@
+name: SLB Adhoc Cypress Tests
+
+on: [ workflow_dispatch ]
+
+jobs:
+  cypress-run-chrome:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          browser: chrome
+          record: true
+        env: 
+          CYPRESS_RECORD_KEY: 45975225-8c53-44da-9711-cc5ed83bb423
+
+  cypress-run-electron:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node12.18.3-chrome87-ff82
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          browser: electron
+          record: true
+        env: 
+          CYPRESS_RECORD_KEY: 45975225-8c53-44da-9711-cc5ed83bb423
+
+  cypress-run-edge:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node16.16.0-chrome107-ff107-edge
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
+        with:
+          browser: edge
+          record: true
+        env: 
+          CYPRESS_RECORD_KEY: 45975225-8c53-44da-9711-cc5ed83bb423
