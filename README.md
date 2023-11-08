@@ -1,4 +1,4 @@
-SLB Demo Project
+SLB Demo Project - 08-11-2023
 
 Automation Test SLB - Cypress folder containing cypress Automation test Automation script can be run via Github action, Steps are mentioned below. Test will run on different browsers- Chrome, Electron, Edge. 
 
